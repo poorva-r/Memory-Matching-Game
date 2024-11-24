@@ -22,7 +22,14 @@ function App() {
 
   return (
     <div className="text-center">
-      {gameStarted ? <Game /> : <StartScreen startGame={startGame} />}
+      {/* if game has not started and not finished then head to start screen and update game started or not */}
+      {!gameStarted && !gameFinished && <StartScreen startGame={startGame} />}
+      {/* if game has started and is running then show the game component */}
+      {gameStarted && (
+        <Game finishGame={finishGame} setscore={score} score={score} />
+      )}
+      {/* if game has finished show the finish screen and update if restart the game or not */}
+      {gameFinished && <FinishedScreen score={score} startGame={startGame} />}
     </div>
   );
 }
