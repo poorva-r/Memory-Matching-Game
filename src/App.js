@@ -26,7 +26,7 @@ function App() {
   }, [gameStarted, gameFinished]);
 
   return (
-    <div className="text-center">
+    <div className="text-center flex items-center justify-center min-h-screen bg-teal-100">
       {/* if game has not started and not finished then head to start screen and update game started or not */}
       {!gameStarted && !gameFinished && <StartScreen startGame={startGame} />}
       {/* if game has started and is running then show the game component */}
