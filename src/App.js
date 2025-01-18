@@ -7,12 +7,12 @@ import FinishedScreen from "./components/FinishedScreen";
 function App() {
   const [gameStarted, setgameStarted] = useState(false);
   const [gameFinished, setgameFinished] = useState(false);
-  const [score, setscore] = useState(0);
+  const [Score, setScore] = useState(0);
 
   const startGame = () => {
     setgameStarted(true);
     setgameFinished(false);
-    setscore(0);
+    setScore(0);
   };
 
   const finishGame = () => {
@@ -20,16 +20,21 @@ function App() {
     setgameStarted(false);
   };
 
+  useEffect(() => {
+    console.log('game started?', gameStarted);
+    console.log('game finished?', gameFinished);
+  }, [gameStarted, gameFinished]);
+
   return (
     <div className="text-center">
       {/* if game has not started and not finished then head to start screen and update game started or not */}
       {!gameStarted && !gameFinished && <StartScreen startGame={startGame} />}
       {/* if game has started and is running then show the game component */}
       {gameStarted && (
-        <Game finishGame={finishGame} setscore={score} score={score} />
+        <Game finishGame={finishGame} setScore={setScore} score={Score} />
       )}
       {/* if game has finished show the finish screen and update if restart the game or not */}
-      {gameFinished && <FinishedScreen score={score} startGame={startGame} />}
+      {gameFinished && <FinishedScreen score={Score} startGame={startGame} />}
     </div>
   );
 }
