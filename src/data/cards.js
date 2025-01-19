@@ -1,39 +1,16 @@
-export const cardPairs = [
-{
-    id:1,
-    content: 'A',
-    flipped: false,
-    matched:false
-},
-{
-    id:2,
-    content: 'A',
-    flipped: false,
-    matched:false
-},
-{
-    id:3,
-    content: 'B',
-    flipped: false,
-    matched:false
-},
-{
-    id:4,
-    content: 'B',
-    flipped: false,
-    matched:false
-},
-{
-    id:5,
-    content: 'C',
-    flipped: false,
-    matched:false
-},
-{
-    id:6,
-    content: 'C',
-    flipped: false,
-    matched:false
-},
+const contents = ["🎶", "😎", "👻", "👽", "🤖", "💩"];
 
-]
+export const cardPairs = contents.flatMap((content, index) => [
+  {
+    id: index * 2 + 1,
+    content,
+    flipped: false,
+    matched: false,
+  },
+  {
+    id: index * 2 + 2,
+    content,
+    flipped: false,
+    matched: false,
+  },
+]);
