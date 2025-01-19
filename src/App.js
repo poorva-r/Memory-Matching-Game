@@ -20,11 +20,6 @@ function App() {
     setgameStarted(false);
   };
 
-  useEffect(() => {
-    console.log('game started?', gameStarted);
-    console.log('game finished?', gameFinished);
-  }, [gameStarted, gameFinished]);
-
   return (
     <div className="text-center flex items-center justify-center min-h-screen bg-teal-100">
       {/* if game has not started and not finished then head to start screen and update game started or not */}

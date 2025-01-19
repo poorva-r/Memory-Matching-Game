@@ -47,9 +47,17 @@ const Game = ({finishGame, setScore, score}) => {
         {
             setTimeout(() => {
                 setflippedCards([]);
-            }, 1000);
+            }, 800);
         }
     };
+
+    useEffect(() => {
+        if (matchedCards.length === cards.length)
+        {
+            finishGame();
+        }
+        
+    }, [matchedCards]);
 
 
     return ( 
