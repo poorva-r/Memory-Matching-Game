@@ -62,7 +62,7 @@ const Game = ({finishGame, setScore, score}) => {
 
     return ( 
         <div>
-            <div className='grid grid-cols-4 gap-8 p-10'>
+            <div className='grid grid-cols-4 gap-5 md:gap-8 p-5 md:p-10'>
                 {cards.map((card) => (
                     <Card 
                     key = {card.id}
