@@ -1,6 +1,35 @@
 import React, { useState, useEffect } from "react";
+import confetti from "canvas-confetti";
 
 const FinishedScreen = ({ score, startGame }) => {
+
+  useEffect(() => {
+    const duration = 3 * 1000; // 3 seconds
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 2, // Two particles at a time for alternating colors
+        angle: 60,        // Left side
+        spread: 55,
+        origin: { x: 0 }, // Left edge of the screen
+        colors: ["#FFFFFF", "#000000"],
+      });
+
+      confetti({
+        particleCount: 2,
+        angle: 120,       // Right side
+        spread: 55,
+        origin: { x: 1 }, // Right edge of the screen
+        colors: ["#FFFFFF", "#000000"]
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }, []);
+  
   return (
     <div className="font-kalam font-bold">
       <div className="text-4xl font-bold mb-4">You win!</div>
