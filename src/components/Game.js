@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { cardPairs } from "../data/cards";
 import Card from "./Card";
+import { sounds } from "../utils/sounds";
 
 const Game = ({ finishGame, setScore, score }) => {
   // make a shuffled copy of the cards
@@ -10,6 +11,10 @@ const Game = ({ finishGame, setScore, score }) => {
   const [matchedCards, setmatchedCards] = useState([]);
 
   const handleCardClick = (id) => {
+    // play sound
+    sounds.flip.currentTime = 0;
+    sounds.flip.play();
+
     // prevent invalid clicks
     if (matchedCards.includes(id) || flippedCards.includes(id)) return;
 
@@ -33,6 +38,10 @@ const Game = ({ finishGame, setScore, score }) => {
     const secondCard = cards.find((card) => card.id === secondId);
 
     if (firstCard.content === secondCard.content) {
+      
+      sounds.ding.currentTime = 0;
+      sounds.ding.play();
+
       setmatchedCards((prev) => [...prev, firstId, secondId]);
       setflippedCards([]);
       setScore(score + 1);
