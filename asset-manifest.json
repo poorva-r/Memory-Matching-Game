@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/memory-matching-game/static/css/main.0006f418.css",
+    "main.js": "/memory-matching-game/static/js/main.eeb936b6.js",
+    "static/js/453.a4f3026f.chunk.js": "/memory-matching-game/static/js/453.a4f3026f.chunk.js",
+    "static/media/light_bg.jpg": "/memory-matching-game/static/media/light_bg.83385ef502326f7f98ff.jpg",
+    "static/media/fireworks.wav": "/memory-matching-game/static/media/fireworks.b006df41b1e5e8c61ad1.wav",
+    "static/media/ding.wav": "/memory-matching-game/static/media/ding.a921a9f20f3d945c36fe.wav",
+    "static/media/flip.wav": "/memory-matching-game/static/media/flip.aaf00b09be4c8cc0b1a9.wav",
+    "static/media/click.mp3": "/memory-matching-game/static/media/click.1b79e7a4ee61964ed145.mp3",
+    "index.html": "/memory-matching-game/index.html",
+    "static/media/cursor.svg": "/memory-matching-game/static/media/cursor.01f100a8d74720da669c.svg",
+    "main.0006f418.css.map": "/memory-matching-game/static/css/main.0006f418.css.map",
+    "main.eeb936b6.js.map": "/memory-matching-game/static/js/main.eeb936b6.js.map",
+    "453.a4f3026f.chunk.js.map": "/memory-matching-game/static/js/453.a4f3026f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0006f418.css",
+    "static/js/main.eeb936b6.js"
+  ]
+}
