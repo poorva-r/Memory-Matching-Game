@@ -1,4 +1,4 @@
-const contents = ["🎶", "😎", "👻", "👽", "🤖", "💩"];
+const contents = ["👾", "😎", "👻", "👽", "🤖", "💩"];
 
 export const cardPairs = contents.flatMap((content, index) => [
   {

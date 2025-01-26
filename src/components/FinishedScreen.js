@@ -43,11 +43,11 @@ const FinishedScreen = ({ score, startGame }) => {
   }
   
   return (
-    <div className="font-kalam font-bold">
-      <div className="text-4xl font-bold mb-4">You win!</div>
+    <div className="font-prime font-bold">
+      <div className="text-4xl font-bold mb-4 text-white">You win!</div>
       {/* <div className="text-4xl font-bold mt-4 mb-8">Your Score is {score} </div> */}
       <button
-        className="cursor-custom group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-700 border-2 border-black backdrop-blur-lg px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-blue-700/50"
+        className="cursor-custom group/button relative inline-flex items-center justify-center overflow-hidden rounded-md bg-gray-900 border-2 border-white backdrop-blur-lg px-6 py-2 text-base font-semibold text-white transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-gray-200/50"
         onClick={handleButtonClick}
       >
         <span className="text-2xl">Restart Game</span>

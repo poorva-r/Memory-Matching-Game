@@ -3,13 +3,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        kalam: ["Kalam", "sans-serif"],
+        prime: ["Courier Prime", "sans-serif"],
       },
       backgroundImage: {
         "light-bg": "url('/src/assets/light_bg.jpg')",
       },
       cursor: { 
-        "custom": "url('/src/assets/cursor.svg'), auto" 
+        "custom": "url('/src/assets/cursor.png'), auto" 
       },
     },
   },
