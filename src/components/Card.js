@@ -8,7 +8,9 @@ const Card = ({ content, flipped, matched, onClick }) => {
       }`}
       onClick={onClick}
     >
-      {flipped || matched ? content : "?"}
+      {flipped || matched ? 
+      <img src={content} className="w-10 h-10 md:h-20 md:w-20 lg:w-26 lg:h-26" />
+      : "?"}
     </div>
   );
 };

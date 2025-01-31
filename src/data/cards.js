@@ -1,4 +1,11 @@
-const contents = ["👾", "😎", "👻", "👽", "🤖", "💩"];
+import cube from "../data/cube.png";
+import cloud from "../data/cloud.png";
+import paw from "../data/paw.png";
+import books from "../data/books.png";
+import treasure from "../data/treasure.png";
+import noodles from "../data/noodles.png";
+
+const contents = [cube, cloud, paw, books, treasure, noodles];
 
 export const cardPairs = contents.flatMap((content, index) => [
   {
