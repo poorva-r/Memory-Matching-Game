@@ -3,7 +3,7 @@ import { cardPairs } from "../data/cards";
 import Card from "./Card";
 import { sounds } from "../utils/sounds";
 
-const Game = ({ finishGame, setScore, score }) => {
+const Game = ({ finishGame, setScore, score, timer }) => {
   // make a shuffled copy of the cards
   const shuffledCards = [...cardPairs].sort(() => Math.random() - 0.5);
   const [cards, setcards] = useState(shuffledCards);
@@ -38,7 +38,6 @@ const Game = ({ finishGame, setScore, score }) => {
     const secondCard = cards.find((card) => card.id === secondId);
 
     if (firstCard.content === secondCard.content) {
-      
       sounds.ding.currentTime = 0;
       sounds.ding.play();
 
@@ -70,6 +69,12 @@ const Game = ({ finishGame, setScore, score }) => {
             onClick={() => handleCardClick(card.id)}
           />
         ))}
+      </div>
+      <div className="mt-18 font-semibold text-2xl text-white font-prime gap-2">
+        Time Left <br />
+        {`${Math.floor(timer / 60)
+          .toString()
+          .padStart(2, "0")}:${(timer % 60).toString().padStart(2, "0")}`}
       </div>
     </div>
   );
